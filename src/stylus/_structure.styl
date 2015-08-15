@@ -1,0 +1,28 @@
+#logo
+  font-family $header-font
+  display block
+  text-align center
+  position relative
+  top 100px
+  span
+    display inline-block
+    
+    &.text
+      color $gray-light
+      font-size 120px
+      +below($width-s)
+        font-size 80px
+      +below($width-xs)
+        font-size 50px
+
+    &.img
+      margin -20px -15px
+      background transparent url("../img/logo.svg") center center no-repeat 
+      background-size 100% 100%
+      width 150px
+      height 240px
+      
+      +below($width-xs)
+        width 100px
+        height 160px
+
