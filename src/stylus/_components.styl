@@ -1,8 +1,8 @@
 $button
   position relative
-  background-color $black
+  background-color $gray
   border 1px solid $gray
-  color $gray
+  color $black
   font-size 1rem
   font-family $body-font
   font-weight 100
@@ -15,17 +15,56 @@ $button
   transition 0.2s linear all
   
   &:hover
-    background-color $gray-blue
-    color $black
-    
-  &[disabled]  
-    cursor inherit
-    border 1px solid $gray-darker
-    color $gray-darker
-    &:hover
-      background-color $black
-      color $gray-darker
+    background-color $white
       
 
 button
   @extends $button      
+  
+
+
+.feature
+  display inline-block
+  width 300px
+  height 250px
+  margin 10px 10px
+  vertical-align top
+  
+  +below($width-s)
+    width 90%
+    margin 20px auto
+    
+  .caption
+    color $gray
+    padding-top 1rem
+    font-weight 100
+    line-height 1.5em
+    transition all 1s
+    width 80%
+    margin 0 auto
+
+    span
+      color $white
+      font-weight 400
+    
+  .img
+    display inline-block
+    width 130px
+    height 130px
+    padding 30px
+    border-radius 200px
+    border 2px solid $gray-dark
+    img
+      width 100%
+      height 100%
+      filter invert(50%)
+      transition all 1s
+    
+  &:hover
+    .caption
+      color $white
+    .img
+      img
+        filter invert(100%)  
+          
+
