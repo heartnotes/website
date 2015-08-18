@@ -7,7 +7,7 @@ args = require('yargs').argv
 
 
 options = 
-  minifiedBuild: !!args.minifed
+  minifiedBuild: !!args.minified
   dontExitOnError: false
 
 
