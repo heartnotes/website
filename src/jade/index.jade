@@ -7,7 +7,6 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     link(href='http://fonts.googleapis.com/css?family=Lobster+Two|Roboto:100,400,700' rel='stylesheet' type='text/css')
     link(href="css/app.css", rel="stylesheet", type="text/css")
-    link(rel="stylesheet", type="text/css", href="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css")
 
     // icons & favicons
     link(rel="shortcut icon", href="/img/logo_144x144.png")
@@ -31,11 +30,6 @@ html
       a.button.mac.disabled(href="#")
         img(src="/img/icons/apple19.svg")
         span Download for Mac (10.8+)
-
-    section.screenshots
-      img(src="https://farm6.staticflickr.com/5691/20508547440_f036850bd5_z.jpg")
-      img(src="https://farm6.staticflickr.com/5710/20509806649_a80f3abf24_z.jpg")
-      img(src="https://farm1.staticflickr.com/683/20696531265_8606d7c6f7_z.jpg")
 
     section.features
       .row
@@ -72,6 +66,13 @@ html
             | <span>Open-source goodness.</span> You can <a href="https://github.com/hiddentao/heartnotes" target="_blank">see our code</a> for yourself.
 
 
+    section.screenshots
+      .slider
+        img(src="https://farm1.staticflickr.com/739/20691158382_e8eea3ba0d_z.jpg")
+        img(src="https://farm1.staticflickr.com/782/20674165626_caa666d040_z.jpg")
+        img(src="https://farm1.staticflickr.com/607/20079477163_94a5eac1ec_z.jpg")
+
+
     footer
       .credits Made with love by <a href="https://twitter.com/hiddentao" target="_blank">@hiddentao</a>
       .iconCredits Icons made by <a href="http://www.flaticon.com/authors/picol" title="Picol">Picol</a>, <a href="http://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a>, <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/google" title="Google">Google</a>, <a href="http://www.flaticon.com/authors/anton-saputro" title="Anton Saputro">Anton Saputro</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
@@ -90,11 +91,12 @@ html
               .removeClass('disabled');
           });
 
-        $('.screenshots').slick({
+        $('.screenshots .slider').slick({
           dots: true,
           infinite: true,
           accessibility: false,
           arrows: false,
+          variableWidth: true,
         });
       });
 
