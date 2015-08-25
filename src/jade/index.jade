@@ -32,6 +32,8 @@ html
         .info
           span.goto Download
           span.extra (OS X 10.8+ required)
+      .versionInfo
+        .loader
 
     section.features
       .row
@@ -91,6 +93,8 @@ html
             $('.download a.mac')
               .attr('href', downloadURL)
               .removeClass('disabled');
+            $('.download .versionInfo')
+              .text('Latest release: ' + release.tag_name);
           });
 
         $('.screenshots .slider').slick({
