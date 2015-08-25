@@ -63,7 +63,7 @@ html
           .img
             img(src="/img/icons/socialnetwork180.svg")
           .caption
-            | <span>Open-source goodness</span> You can <a href="https://github.com/hiddentao/heartnotes" target="_blank">see our code</a> for yourself.
+            | <span>Open-source goodness</span> You can <a href="https://github.com/heartnotes/heartnotes" target="_blank">see our code</a> for yourself.
 
 
     section.screenshots
@@ -82,10 +82,10 @@ html
               
     script.
       $(function() {
-        $.getJSON("https://api.github.com/repos/hiddentao/heartnotes/releases/latest")
+        $.getJSON("https://api.github.com/repos/heartnotes/heartnotes/releases/latest")
           .done(function (release) {
             var asset = release.assets[0];
-            var downloadURL = "https://github.com/hiddentao/heartnotes/releases/download/" + release.tag_name + "/" + asset.name;
+            var downloadURL = "https://github.com/heartnotes/heartnotes/releases/download/" + release.tag_name + "/" + asset.name;
             $('.download a.mac')
               .attr('href', downloadURL)
               .removeClass('disabled');
