@@ -72,9 +72,9 @@ html
 
     section.screenshots
       .slider
-        img(src="https://farm1.staticflickr.com/739/20691158382_e8eea3ba0d_z.jpg")
-        img(src="https://farm1.staticflickr.com/782/20674165626_caa666d040_z.jpg")
-        img(src="https://farm1.staticflickr.com/607/20079477163_94a5eac1ec_z.jpg")
+        img(src="https://farm6.staticflickr.com/5649/20873461532_a055a9acd7_o.png")
+        img(src="https://farm6.staticflickr.com/5721/20695076450_146d688040_o.png")
+        img(src="https://farm6.staticflickr.com/5722/20873461862_471296cf55_o.png")
 
 
     footer
@@ -93,8 +93,11 @@ html
             $('.download a.mac')
               .attr('href', downloadURL)
               .removeClass('disabled');
+
+            var anchor = '<a title="View all releases" href="https://github.com/heartnotes/heartnotes/releases">' + release.tag_name + '</a>';
+
             $('.download .versionInfo')
-              .text('Latest release: ' + release.tag_name);
+              .html('Latest release: ' + anchor);
           });
 
         $('.screenshots .slider').slick({
