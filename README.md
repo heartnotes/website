@@ -1,6 +1,6 @@
 # Heartnotes website
 
-Homepage of the [Heartnotes](https://github.com/hiddentao/heartnotes) app.
+**DEPRECATED** Previous homepage of the [Heartnotes](https://github.com/hiddentao/heartnotes) app.
 
 ## Development
 
